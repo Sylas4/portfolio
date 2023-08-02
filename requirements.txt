@@ -1,5 +1,5 @@
 matplotlib
-numpy
+numpy==1.21.4
 plotly
 scipy
 altair
@@ -7,3 +7,4 @@ shap
 sklearn
 fuzzywuzzy
 joblib
+numba==0.53
