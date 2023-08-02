@@ -6,7 +6,6 @@ import shap
 import pandas as pd
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
-import sys
     
 ###########################################################
 st.set_page_config(page_icon="💸", page_title = "Lilian Martin",

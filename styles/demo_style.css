@@ -1,0 +1,39 @@
+ul {
+    padding-left: 1.5rem;
+  }
+
+h1 {
+    text-align:left;
+}
+
+h5 {
+    text-align:left;
+}
+
+body {background-color: #ffedda;}
+/*
+.css-1kyxreq
+{
+    display:block;
+}
+
+
+img {
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+*/
+/* Permet de centrer l'image en wide mode */
+/*
+#MainMenu {
+    visibility: hidden;
+}
+header {
+    visibility: hidden;
+}
+*/
+footer {
+    visibility: hidden;
+}
+
