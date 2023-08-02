@@ -6,6 +6,8 @@ from functions import dashboard
 
 st.set_page_config(page_icon="🌍", page_title = "Lilian Martin", layout="wide", initial_sidebar_state="auto")
 
+with open("./styles/style.css") as f:
+    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 ##### LOAD DATA ########################################
 

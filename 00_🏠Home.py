@@ -15,25 +15,31 @@ with open("./styles/style.css") as f:
 col1, col2 = st.columns([3,1])
 with col1:
     st.markdown('# Martin D. Lilian, Data analyst')
-    st.markdown("**[LinkedIn](https://www.linkedin.com/in/lilianmartin4/) | martin.lilian4@gmail.com**")
-
-    l = st.radio("**Pick a language for the resume/CV**",
-                ("ENG","FR"), horizontal=True)
-    
-    with open(f"./data/{l}_resume.pdf", "rb") as cv_file:
-        cv = cv_file.read()
-    st.download_button("Download resume", data = cv, file_name=f'Lilian_Martin.pdf',
-                       mime="application/octet-stream")
-
+    st.markdown('''Welcome to my portfolio! <br>
+                Here you'll find a collection of my data science projects that showcase my skills and passion for analytics, visualization, scraping and machine learning. I'll be adding more projects soon, so stay tuned. <br>
+                In the meantime, feel free to contact me if you have any questions or would like to discuss potential collaborations.''',
+                unsafe_allow_html=True)
 with col2:
     st.image(Image.open('img/pp_2.jpeg'))
 
-st.success('''
-Dynamic, disciplined & determined, I'm keen to put my skills at the service of causes that are dear to me. My favorite missions are scrapping, SQL queries and streamlit development.
-- Data analyst with 4 years' experience
-- Data science skills
-- Data training Manager experience
-''')
+col1, col2 = st.columns([3,1])
+with col1:
+    st.success('''
+        Dynamic, disciplined & determined, I'm keen to put my skills at the service of causes that are dear to me. My favorite missions are scrapping, SQL queries and streamlit development.
+        - Data analyst with 4 years' experience
+        - Data science skills
+        - Data training Manager experience
+        ''')
+with col2:
+    st.markdown('''**[LinkedIn](https://www.linkedin.com/in/lilianmartin4/)
+                martin.lilian4@gmail.com**''')
+    l = st.radio("Download my resume in FR/ENG:",
+        ("ENG","FR"), horizontal=True)
+    with open(f"./data/{l}_resume.pdf", "rb") as cv_file:
+        cv = cv_file.read()
+    st.download_button("Resume", data = cv, file_name=f'Lilian_Martin.pdf',
+                       mime="application/octet-stream")
+
 
 ###### Hard Skills ######
 st.markdown('''
@@ -68,10 +74,12 @@ col1, col2 = st.columns([3,2])
 with col1:
     st.markdown('''
     **Matrice, Paris**
-    - Training people to Data Analysis
-    - Creation of training content
-    - Professional integration coaching
-    - Reference : s.olivera.silvera@gmail.com
+    - Training design & implementation
+    - Training on Python, SQL, Looker...
+    - Data analysis, machine learning, scraping...
+    - 50 data analysts trained on-site
+    - Coaching in professional reintegration
+    - Reference : tjohnson@matrice.io |  pflouvat@matrice.io | s.olivera.silvera@gmail.com
     ''')
 with col2:
     st.image(Image.open('img/tf1_2.png'))
@@ -187,43 +195,5 @@ layout.txt2('🦾','**Mangas**', 'FMA, AOT, Gangsta')
 layout.txt2('🗣', '**Art**', 'Theater, public speech, graphic art')
 layout.txt2('🚂','**Solo travelling**', 'Scandinavia')
 layout.txt2('🍻','**Volunteering**', 'Bar tending')
-
-# ##### Projects ######
-# st.markdown('''
-# # My Data projects
-# ''')
-# #####################
-# st.markdown('''
-# # Assurancetourix
-
-# Projet visant à déployer un modèle de machine learning permettant de prédire le coup d'assurance santé d'une personne en fonction de critères divers.
-
-# ''')
-# st.info('''
-# - widgets streamlit
-# - pickle
-# - prediction
-# - Explicabilité avec SHAP
-# ''')
-
-# #####################
-# st.markdown('''
-# # Plot your func
-
-# Projet visant à déployer un modèle de machine learning permettant de prédire le coup d'assurance santé d'une personne en fonction de critères divers.
-
-# ''')
-
-# #####################
-# st.markdown('''
-# # La loi dé grands nombres
-
-# ''')
-
-# #####################
-# st.markdown('''
-# # Statistiques inférentielles
-
-# ''')
 
 

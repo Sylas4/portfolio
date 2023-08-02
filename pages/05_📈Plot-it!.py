@@ -9,10 +9,10 @@ import numpy as np
 st.set_page_config(page_icon="📈", page_title = "Lilian Martin",
                    initial_sidebar_state = "auto", layout="wide")
 
-with open("../styles/style.css") as f:
+with open("./styles/style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
-st.markdown('''# Plot-its
+st.markdown('''# Plot-it
 The idea behind this little application was to have on hand a solution that would allow me to show the look of different functions.
             
 Coming soon: the ability to enter the function of your choice by hand.''')
@@ -21,7 +21,7 @@ Coming soon: the ability to enter the function of your choice by hand.''')
 functions = ['x**2', 'x**3', 'x**.5', 'log(x)', '1/x', 'cos(x)', 'tan(x)', 'sin(x)']
 
 # Sidebar
-with st.sidebar():
+with st.sidebar:
      options = st.multiselect(
           '**Which functions do you want to plot ?**',
           functions, ['cos(x)', 'tan(x)', 'sin(x)'])

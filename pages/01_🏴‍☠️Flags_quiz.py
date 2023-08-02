@@ -14,8 +14,7 @@ with open("./styles/style.css") as f:
 colA, colB = st.columns([3,1])
 with colA:
     st.markdown('''# Are you a good pirate?
-Find out which country the flag belongs to. <br>
-Don't forget to press "Enter" to validate your answer. <br>
+Find out which country the flag belongs to. Don't forget to press "Enter" to validate your answer. <br>
 You can try as many times as you like, and spelling mistakes are corrected automatically.''',
 unsafe_allow_html=True)
 
@@ -54,7 +53,7 @@ if 'id' not in st.session_state or pa:
 if 'tryagain' not in st.session_state or pa:
     st.session_state['tryagain'] = False
 if 'answer' not in st.session_state or pa:
-    st.session_state['answer'] = "Let me guess.."
+    st.session_state['answer'] = "Answer here"
 
 st.session_state['country'] = showcountry(st.session_state['id'])
 st.session_state['right'] = fuzz.token_sort_ratio(st.session_state['answer'], st.session_state['country']) >= 80
@@ -65,7 +64,7 @@ st.session_state['right'] = fuzz.token_sort_ratio(st.session_state['answer'], st
 
 showflag(st.session_state['id']) 
 
-st.text_input("**What flag is that? Don't worry if the spelling isn't perfect, I'll understand**",
+st.text_input("**What flag is that?**",
               st.session_state['answer'], key='answer', on_change=tryagain)
 
 if st.session_state["right"]:

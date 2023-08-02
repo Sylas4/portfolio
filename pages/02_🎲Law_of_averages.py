@@ -8,6 +8,9 @@ import pandas as pd
 st.set_page_config(page_icon="🎲", layout="centered", page_title = "Lilian Martin",
                    initial_sidebar_state = "auto")
 
+with open("./styles/style.css") as f:
+    st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
+
 ###############################################################
 def animate(n,t, chart):
     for i in range(1, n+1):

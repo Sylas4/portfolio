@@ -9,7 +9,9 @@ import matplotlib.pyplot as plt
     
 ###########################################################
 st.set_page_config(page_icon="💸", page_title = "Lilian Martin",
-                   layout="wide", initial_sidebar_state = "auto")
+  layout="wide", initial_sidebar_state = "auto")
+with open("./styles/style.css") as f:
+  st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 # We get our fitted model
@@ -17,12 +19,11 @@ model = pickle.load(open('./data/health_model.pkl', 'rb'))
 
 # Fonction header
 def head(a, b, w):
-  col1, col2 = st.columns([3,1])
+  col1, col2 = st.columns([4,1])
   with col1:
-    st.markdown(a)
+    st.markdown(a, unsafe_allow_html=True)
   with col2:
     st.image(b, width = w) 
-
 
 ## Fonction SHAP
 def st_shap(plot, height=None):
@@ -31,10 +32,16 @@ def st_shap(plot, height=None):
 
 #####################
 # Header 
-head('''
+col1, col2 = st.columns([4,1])
+with col1:
+  st.markdown('''
 # Assurancetourix
-''',
-Image.open('./img/assurancetourix.png'), 125)
+The goal of this project is to deploy a predictive model I've developed, which estimates the (hypothetical) insurance costs for potential policyholders. 
+The interesting aspect of this application is its ability to identify and explain the factors influencing these cost variations.
+The explicability of artificial intelligence algorithms is indeed a very important subject today.
+''')
+with col2:
+  st.image(Image.open('./img/assurancetourix.png'), use_column_width=True)
 
 # Rentrer les variables test:
 #############################

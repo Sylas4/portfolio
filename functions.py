@@ -76,12 +76,12 @@ class gaussienne():
         ax.set_xlim([-3.8*scale, 3.8*scale])
 
         # On remplit l'aire sous notre courbe en fonction de x et y
-        ax.fill_between(x,y2,alpha=0.7, color='#ffcc00')
-        filled_poly = ax.fill_between(x_all, y, 0, alpha=0.2, color="#ffcc00")
+        ax.fill_between(x,y2,alpha=0.7, color='#79B3A4')
+        filled_poly = ax.fill_between(x_all, y, 0, alpha=0.2, color="#79B3A4")
         
         # On écrit le pourcentage d'aire remplit sous la courbe
         (x0, y0), (x1, y1) = filled_poly.get_paths()[0].get_extents().get_points()
-        ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
+        ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='#800000')
         
         # On affiche les coordonnées de -z et z
         plt.xlabel('Z') 
@@ -111,12 +111,12 @@ class gaussienne():
         ax.set_xlim([-3.8*scale,4*scale])
 
         # On remplit l'air sous notre courbe en fonction de x et y
-        ax.fill_between(x,y2,alpha=0.7, color='#ffcc00')
-        filled_poly = ax.fill_between(x_all,y, alpha=0.3, color='#ffcc00')
+        ax.fill_between(x,y2,alpha=0.7, color='#79B3A4')
+        filled_poly = ax.fill_between(x_all,y, alpha=0.3, color='#79B3A4')
 
         # On écrit la pourcentage d'aire remplit sous la courbe
         (x0, y0), (x1, y1) = filled_poly.get_paths()[0].get_extents().get_points()
-        ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
+        ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='#800000')
         
         # On affiche les coordonnées de z
         plt.xlabel('Z') 
@@ -148,12 +148,12 @@ class gaussienne():
         aire = norm.cdf(z,0,scale)
 
         # On remplit l'aire complète sous notre courbe
-        ax.fill_between(x, y, alpha=0.3, color='#ffcc00')
+        ax.fill_between(x, y, alpha=0.3, color='#79B3A4')
         # Puis seulement l'aire qui nous intéresse, en plus foncé
-        ax.fill_between(x_fill, y_fill, alpha=0.7, color='#ffcc00')
+        ax.fill_between(x_fill, y_fill, alpha=0.7, color='#79B3A4')
 
         # On écrit le pourcentage d'aire remplit sous la courbe
-        ax.text(0, .2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
+        ax.text(0, .2, round(aire,3), ha='center', va='center', fontsize=16, color='#800000')
 
         plt.xlabel('Z') 
         plt.ylabel('Frequency') 
@@ -180,178 +180,15 @@ class gaussienne():
         aire = (norm.cdf(z,0,scale)-0.5)*2
         
         # On remplit l'air sous notre courbe en fonction de x et y
-        ax.fill_between(x,y, alpha=0.7, color='#ffcc00', label=aire)
+        ax.fill_between(x,y, alpha=0.7, color='#79B3A4', label=aire)
         
         # On écrit la pourcentage d'aire remplit sous la courbe
-        filled_poly = ax.fill_between(x_all,y2,0, alpha=0.3, color='#ffcc00')
+        filled_poly = ax.fill_between(x_all,y2,0, alpha=0.3, color='#79B3A4')
         (x0, y0), (x1, y1) = filled_poly.get_paths()[0].get_extents().get_points()
-        ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
+        ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='#800000')
         
         plt.xlabel('Z') 
         plt.ylabel('Frequency') 
         plt.yticks([0,.1,.2,.3,.4,.5,.6,.7,.8])
         # plt.show()
         return fig
-
-# class tast():
-
-#     def find_z(aire, scale, unilateral=True):
-#         if unilateral:
-#             return norm.ppf(aire,0,scale)
-#         else:
-#             # On calcul le Zscore pour la probabilité voulu en bilatéral
-#             return norm.ppf(0.5 + (aire/2),0,scale)
-    
-#     def find_aire(z, scale, unilateral=True):
-#         if unilateral:
-#             return norm.cdf(z,0,scale)
-#         else:
-#             # On calcul la probabilité qui correspond à notre Zscore (ne pas oublier on est en bilatéral)
-#             return (norm.cdf(z,0,scale)-0.5)*2
-
-#     def plot_it(aire,scale, mode):
-#         fig, ax = plt.subplots(figsize=(9,6))
-        
-#         # On définit les x_all et y2 pour tracer un courbe de gauss
-#         x_all = np.arange(-50, 50, 0.001)
-#         y = norm.pdf(x_all,0,scale)
-
-#         # On trace la courbe
-#         ax.plot(x_all,y)
-
-#         # On limite nos abscisse entre -4 et 4
-#         ax.set_xlim([-3.8*scale, 3.8*scale])
-
-#         # On affiche les coordonnées de -z et z
-#         plt.xlabel('Z') 
-#         plt.ylabel('Frequency')
-
-#         plt.yticks([0,.1,.2,.3,.4,.5,.6,.7,.8])
-#         # plt.show()
-
-#         if mode=="zb":
-#             z = find_z(aire, scale, unilateral=False):
-#             x = np.arange(-z, z, 0.001)
-#             y2 = norm.pdf(x,0,scale)
-#             # On remplit l'aire sous notre courbe en fonction de x et y
-#             fill = ax.fill_between(x,y2,alpha=0.7, color='#ffcc00')
-#             filled_poly = ax.fill_between(x_all, y, 0, alpha=0.2, color="#ffcc00")
-#             plt.xticks([-z,z])
-            
-        
-#         return fig
-
-
-
-#         # On calcul le Zscore pour la probabilité voulu en bilatéral
-#         z = norm.ppf(0.5 + (aire/2),0,scale)
-
-#         # On définit les x et y qui délimiteront notre aire sous la courbe grace à -z et z car bilatéral
-#         x = np.arange(-z, z, 0.001)
-#         y2 = norm.pdf(x,0,scale)
-
-        
-
-#         # On remplit l'aire sous notre courbe en fonction de x et y
-#         fill = ax.fill_between(x,y2,alpha=0.7, color='#ffcc00')
-#         filled_poly = ax.fill_between(x_all, y, 0, alpha=0.2, color="#ffcc00")
-        
-#         # On écrit le pourcentage d'aire remplit sous la courbe
-#         (x0, y0), (x1, y1) = filled_poly.get_paths()[0].get_extents().get_points()
-#         ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
-        
-
-
-#     def plot_unilateral(aire,scale):
-#         fig, ax = plt.subplots(figsize=(9,6))
-#         # On définit les x_all et y2 pour tracer un courbe de gauss
-#         x_all = np.arange(-50, 50, 0.001)
-#         y = norm.pdf(x_all,0,scale)
-#         # On calcul le Zscore pour la probabilité voulu en unilatéral
-#         z = norm.ppf(aire, 0, scale)
-        
-#         # On définit les x et y qui délimiteront notre aire sous la courbe grace à z car unilatéral
-#         x = np.arange(-10, z, 0.001)
-#         y2 = norm.pdf(x,0,scale)
-
-
-
-#         # On trace la courbe
-#         ax.plot(x_all,y)
-
-#         # On limite nos abscisse entre -4 et 4
-#         ax.set_xlim([-3.8*scale,4*scale])
-
-#         # On remplit l'air sous notre courbe en fonction de x et y
-#         ax.fill_between(x,y2,alpha=0.7, color='#ffcc00')
-#         filled_poly = ax.fill_between(x_all,y, alpha=0.3, color='#ffcc00')
-
-#         # On écrit la pourcentage d'aire remplit sous la courbe
-#         (x0, y0), (x1, y1) = filled_poly.get_paths()[0].get_extents().get_points()
-#         ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
-        
-#         # On affiche les coordonnées de z
-#         plt.xlabel('Z') 
-#         plt.ylabel('Frequency') 
-#         plt.xticks([z])
-#         plt.yticks([0,.1,.2,.3,.4,.5,.6,.7,.8])
-#         # plt.show()
-#         return fig 
-
-#     def plot_unilateral_z(z,scale):
-#         fig, ax = plt.subplots(figsize=(9,6))
-#         # On définit les x_all et y2 pour tracer un courbe de gauss
-#         x_all = np.arange(-10, 10, 0.001)
-#         y2 = norm.pdf(x_all,0,scale)
-
-#         # On définit les x et y qui délimiteront notre aire sous la courbe grace à z car unilatéral
-#         x = np.arange(-10, z, 0.001)
-#         y = norm.pdf(x,0,scale)
-#         # y se limite à x pour l'aire
-        
-#         ax.plot(x_all,y2)
-#         # On limite nos abscisse entre -4 et 4
-#         ax.set_xlim([-3.8*1,3.8*1])
-       
-#         # On calcul la probabilité qui correspond à notre Zscore
-#         aire = norm.cdf(z,0,scale)
-
-#         # On remplit l'air sous notre courbe en fonction de x et y
-#         ax.fill_between(x, y, alpha=0.7, color='#ffcc00')
-#         filled_poly = ax.fill_between(x_all,y2,0, alpha=0.3, color='#ffcc00')
-
-#         # On écrit la pourcentage d'aire remplit sous la courbe
-#         (x0, y0), (x1, y1) = filled_poly.get_paths()[0].get_extents().get_points()
-#         ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
-        
-#         plt.xlabel('Z') 
-#         plt.ylabel('Frequency') 
-#         plt.yticks([0,.1,.2,.3,.4,.5,.6,.7,.8])
-#         # plt.show()
-#         return fig
-
-#     def plot_bilateral_z(z,scale):
-#         fig, ax = plt.subplots(figsize=(9,6))
-#         # On définit les x_all et y2 pour tracer un courbe de gauss
-#         x_all = np.arange(-10, 10, 0.001)
-#         y2 = norm.pdf(x_all,0,scale)
-#         # On définit les x et y qui délimiteront notre aire sous la courbe grace à z et -z car bilatéral
-#         x = np.arange(-z, z, 0.001)
-#         y = norm.pdf(x,0,scale)
-#         ax.plot(x_all,y2)
-#         # On limite nos abscisse entre -4 et 4
-#         ax.set_xlim([-3.8*scale,3.8*scale])
-#         # On calcul la probabilité qui correspond à notre Zscore (ne pas oublier on est en bilatéral)
-#         aire = (norm.cdf(z,0,scale)-0.5)*2
-#         # On remplit l'air sous notre courbe en fonction de x et y
-#         ax.fill_between(x,y, alpha=0.7, color='#ffcc00', label=aire)
-#         # On écrit la pourcentage d'aire remplit sous la courbe
-#         filled_poly = ax.fill_between(x_all,y2,0, alpha=0.3, color='#ffcc00')
-#         (x0, y0), (x1, y1) = filled_poly.get_paths()[0].get_extents().get_points()
-#         ax.text((x0 + x1) / 2, (y0 + y1) / 2, round(aire,3), ha='center', va='center', fontsize=16, color='crimson')
-        
-#         plt.xlabel('Z') 
-#         plt.ylabel('Frequency') 
-#         plt.yticks([0,.1,.2,.3,.4,.5,.6,.7,.8])
-#         # plt.show()
-#         return fig

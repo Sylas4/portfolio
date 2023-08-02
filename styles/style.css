@@ -6,7 +6,9 @@
 ul {
     padding-left: 1.5rem;
   } 
-
+p {
+  text-align: justify;
+  }
 p, ul, h3, a {
   font-family: 'Raleway';
   }
