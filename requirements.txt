@@ -7,4 +7,4 @@ shap
 sklearn
 fuzzywuzzy
 joblib
-numba==0.53
+numba==0.57
