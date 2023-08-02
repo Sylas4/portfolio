@@ -1,0 +1,9 @@
+matplotlib
+numpy
+plotly
+scipy
+altair
+pickle
+shap
+sklearn
+fuzzywuzzy
