@@ -1,10 +1,10 @@
-matplotlib
-numpy==1.22.0
-plotly
-scipy
 altair
-shap
-scikit-learn
 fuzzywuzzy
 joblib
-numba==0.57
+matplotlib
+numpy==1.22.0
+numba==0.57.1
+plotly
+scikit-learn
+scipy
+shap

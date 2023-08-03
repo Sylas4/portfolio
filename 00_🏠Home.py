@@ -193,4 +193,5 @@ layout.txt2('🗣', '**Art**', 'Theater, public speech, graphic art')
 layout.txt2('🚂','**Solo travelling**', 'Scandinavia')
 layout.txt2('🍻','**Volunteering**', 'Bar tending')
 
-
+import numpy
+st.write(numpy.__version__)
