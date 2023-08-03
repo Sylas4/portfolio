@@ -194,4 +194,5 @@ layout.txt2('🚂','**Solo travelling**', 'Scandinavia')
 layout.txt2('🍻','**Volunteering**', 'Bar tending')
 
 import numpy
-st.write(numpy.__version__)
+st.write(f'numpy:{numpy.__version}')
+st.write(f'streamlit:{st.__version}')
