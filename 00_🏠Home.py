@@ -194,5 +194,7 @@ layout.txt2('🚂','**Solo travelling**', 'Scandinavia')
 layout.txt2('🍻','**Volunteering**', 'Bar tending')
 
 import numpy
+import sklearn
 st.write(f'numpy:{numpy.__version__}')
 st.write(f'streamlit:{st.__version__}')
+st.write(f'sklearn:{sklearn.__version__}')
