@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 from functions import gaussienne as gauss
 
-st.set_page_config(page_icon="🈺", page_title = "Mon streamlit", layout="wide")
+st.set_page_config(page_icon="🈺", page_title = "Lilian Martin", layout="wide")
 
 with open("./styles/style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)

@@ -85,7 +85,6 @@ with col2:
     st.image(Image.open('img/tf1_2.png'))
 
 st.markdown('---')
-st.markdown('#')
 
 ###### Rise Up #######
 layout.txt('''### Data analyst''',
@@ -103,8 +102,6 @@ with col1:
 with col2:
     st.image(Image.open('img/tf1_1.png'))
 st.markdown('---')
-st.markdown('#')
-
 
 ###### SCCF #######
 layout.txt('### Statistical Studies Officer',
@@ -124,7 +121,7 @@ with col1:
 with col2:
     st.image(Image.open('./img/sccf.png'), width=250)
 st.markdown('---')
-st.markdown('#')
+
 
 ###### Other jobs ######
 layout.txt('#### Lead Bartender',
@@ -139,21 +136,21 @@ st.markdown('''
     - Mentoring
 ''')     
 st.markdown('---')
-# st.markdown('#')
+# 
 
 layout.txt('##### Census officer, INSEE/Mairie du 13e, Paris',
 '<h5 class=years>2018</h5>')
-# st.markdown('#')
+# 
 
 layout.txt('##### Investigator, ORIVE, Paris',
 '<h5 class=years>2017 - 2018</h5>')
-# st.markdown('#')
+# 
 
 layout.txt('##### BAFA animator, Enfants du métro, Paris',
 '<h5 class=years>2015 - 2018</h5>')
 st.markdown('''- Caring for children in summer camp
 ''')
-# st.markdown('#')
+# 
 
 layout.txt('##### Odd jobs, Adecco, Paris',
 '<h5 class=years>2013-2014</h5>')
@@ -176,7 +173,7 @@ st.markdown('''
 - Reference: romainwarlop@gmail.com
 ''')
 st.markdown('---')
-# st.markdown('#')
+# 
 
 ###### Demography ######
 layout.txt("### Demography | Paris 1 Panthéon-Sorbonne | Master's degree", 

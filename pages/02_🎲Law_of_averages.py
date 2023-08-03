@@ -58,6 +58,6 @@ status_text = st.empty()
 
 ###############################################################
 
-if st.button("**(re)Start**", key="launch"):
+if st.button("**Start**", key="launch"):
     animate(n,t, chart)
 
