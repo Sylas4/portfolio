@@ -195,4 +195,4 @@ layout.txt2('🍻','**Volunteering**', 'Bar tending')
 
 import numpy
 st.write(f'numpy:{numpy.__version__}')
-st.write(f'streamlit:{st.__version}')
+st.write(f'streamlit:{st.__version__}')
