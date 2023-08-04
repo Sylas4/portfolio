@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 import shap
 import sklearn
-import ipython
+#import ipython
 import pandas as pd
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
