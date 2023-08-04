@@ -9,4 +9,6 @@ numba==0.57.1
 plotly
 scikit-learn==1.1.1
 scipy
+ipython
 shap
+streamlit-card
