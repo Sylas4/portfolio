@@ -4,6 +4,7 @@ import numpy as np
 from io import BytesIO
 import requests
 from fuzzywuzzy import fuzz
+import json
 
 st.set_page_config(page_icon="🏴‍☠️", page_title = "Lilian Martin",
                    layout="wide", initial_sidebar_state = "auto")
@@ -21,11 +22,18 @@ unsafe_allow_html=True)
 with colB:
     st.image(Image.open('./img/strawhat.jpeg'))
 
-# récupérer le json avec tous les countries
+# Get the json with API
+# @st.cache_data
+# def countries():
+#   return requests.get("https://restcountries.com/v3.1/all").json()
+
+# Faster in local:s
 @st.cache_data
 def countries():
-  json = requests.get("https://restcountries.com/v3.1/all").json()
-  return json
+  with open('./data/countries.json') as f:
+      data = json.load(f)
+  return data
+
 
 # récupérer un id country.
 def get_id():

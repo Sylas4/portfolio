@@ -1,5 +1,6 @@
 # Updated on 2023-08-03
 streamlit==1.22.0
+json
 altair
 fuzzywuzzy
 joblib
