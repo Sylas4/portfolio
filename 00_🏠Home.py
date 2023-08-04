@@ -1,8 +1,6 @@
 import streamlit as st
 from PIL import Image
 from functions import layout
-import numpy
-import sklearn
     
 #st.set_page_config(layout="wide", page_title="Interactive table app")
 # 📰 
@@ -10,8 +8,6 @@ st.set_page_config(page_icon="🈺", layout="wide", page_title = "Lilian Martin"
 
 with open("./styles/style.css") as f:
     st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
-
-st.markdown('''<a href='/Projects' target='_self'> Click </a>''', unsafe_allow_html=True)
 
 ###### Header ######
 col1, col2 = st.columns([3,1])
@@ -195,9 +191,4 @@ layout.txt2('🗣', '**Art**', 'Theater, public speech, graphic art')
 layout.txt2('🚂','**Solo travelling**', 'Scandinavia')
 layout.txt2('🍻','**Volunteering**', 'Bar tending')
 
-st.markdown('---')
-with st.expander("notes for dev:"):
-    st.write(f'numpy:{numpy.__version__}')
-    st.write(f'streamlit:{st.__version__}')
-    st.write(f'sklearn:{sklearn.__version__}')
-    st.write('Hey Mom! 👋')
+
