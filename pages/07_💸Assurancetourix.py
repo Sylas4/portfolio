@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 import shap
 import sklearn
-#import ipython
+import IPython
 import pandas as pd
 import streamlit.components.v1 as components
 import matplotlib.pyplot as plt
@@ -112,7 +112,7 @@ with st.expander("notes for dev:"):
     st.markdown(f'''numpy:{np.__version__} <br>
       streamlit:{st.__version__} <br>
       sklearn:{sklearn.__version__} <br>
-      ipython:{ipython.__version__} <br>
+      ipython:{IPython.__version__} <br>
       Hey Mom! 👋
       ''', unsafe_allow_html=True)
 
