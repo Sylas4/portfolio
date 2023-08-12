@@ -12,7 +12,7 @@ with open("./styles/style.css") as f:
 ###### Header ######
 col1, col2 = st.columns([3,1])
 with col1:
-    st.markdown('# Martin D. Lilian, Data analyst')
+    st.markdown('# Martin Lilian, Data analyst')
     st.markdown('''Welcome to my portfolio! <br>
                 Here you'll find a collection of my data science projects that showcase my skills and passion for analytics, visualization, scraping and machine learning. I'll be adding more projects soon, so stay tuned. <br>
                 In the meantime, feel free to contact me if you have any questions or would like to discuss potential collaborations.''',
@@ -23,7 +23,7 @@ with col2:
 col1, col2 = st.columns([3,1])
 with col1:
     st.success('''
-        Dynamic, disciplined & determined, I'm keen to put my skills at the service of causes that are dear to me. My favorite missions are scrapping, SQL queries and streamlit development.
+        Dynamic, disciplined & determined, I'm keen to put my skills at the service of causes that are dear to me. My favorite missions are scraping, SQL queries and streamlit development.
         - Data analyst with 4 years' experience
         - Data science skills
         - Data training Manager experience
@@ -165,7 +165,7 @@ layout.txt('### Data Analyst | OpenClassrooms X ENSAE-ENSAI',
 st.markdown('''
 - Data analysis, machine learning
 - Learned `Python3` & `MySQL`
-- Data scrapping
+- Data scraping
 - 10 professional projects. 
 - A final statiscal report on `UFC`
 - Reference: romainwarlop@gmail.com
