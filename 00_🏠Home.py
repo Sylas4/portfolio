@@ -12,7 +12,7 @@ with open("./styles/style.css") as f:
 ###### Header ######
 col1, col2 = st.columns([3,1])
 with col1:
-    st.markdown('# Martin Lilian, Data analyst')
+    st.markdown('# Martin Lilian, Data scientist')
     st.markdown('''Welcome to my portfolio! <br>
                 Here you'll find a collection of my data science projects that showcase my skills and passion for analytics, visualization, scraping and machine learning. I'll be adding more projects soon, so stay tuned. <br>
                 In the meantime, feel free to contact me if you have any questions or would like to discuss potential collaborations.''',
@@ -182,9 +182,9 @@ st.markdown(''' - Training in sociology & statistics''')
 st.markdown('''
 ## Hobbies
 ''')
-layout.txt2('🤼', '**Combat sports practice**', 'MMA, Luta livre, Karate')
+layout.txt2('🤼', '**Martial arts**', 'MMA, BJJ, Karate')
 layout.txt2('🏂', '**Others sports**', 'Longboard, snowboard')
-layout.txt2('🥊', '**Watching combat sports compétition**', 'UFC, Cage warriors, Ares')
+layout.txt2('🥊', '**Watching combat sports compétition**', 'UFC, Cage warriors, PFL, KSW, ADCC')
 layout.txt2('🕹', '**E-sport**', 'League of Legend, (Fnatic fanboy)')
 layout.txt2('🦾','**Mangas**', 'FMA, AOT, Gangsta')
 layout.txt2('🗣', '**Art**', 'Theater, public speech, graphic art')
