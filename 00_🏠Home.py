@@ -1,6 +1,7 @@
 import streamlit as st
 from PIL import Image
 from functions import layout
+from matplotlib import pyplot as plt
     
 #st.set_page_config(layout="wide", page_title="Interactive table app")
 # 📰 
@@ -24,9 +25,10 @@ col1, col2 = st.columns([3,1])
 with col1:
     st.success('''
         Dynamic, disciplined & determined, I'm keen to put my skills at the service of causes that are dear to me. My favorite missions are scraping, SQL queries and streamlit development.
-        - Data analyst with 4 years' experience
-        - Data science skills
-        - Data training Manager experience
+        - Data scientist with 4 years' experience
+        - Python/SQL as primary languages
+        - Analytics & Scraping skills
+        - Data teacher experience
         ''')
 with col2:
     st.markdown('''**[LinkedIn](https://www.linkedin.com/in/lilianmartin4/)
@@ -65,7 +67,23 @@ layout.txt3('**Good executive**', 'Adaptable, multidisciplinary, resilient')
 ###### Work Experience ######
 st.markdown('# Work Experience')
 
-layout.txt('''### Lead Data analyst / Training Manager''',
+###### VIAPLAY ######
+layout.txt('''### Data scientist''',
+'<h5 class=years>Current role</h5>')
+col1, col2 = st.columns([3,2])
+with col1:
+    st.markdown('''
+    **Viaplay Group, Stockholm**
+    - Developed a Data Quality Index to maintain high standards in our event tracking system.
+    - Analyzed customer behavior data to enhance the user experience, evaluate new features, and monitor errors.
+    - Developed dashboards using Tableau, Databricks, SQL, pyspark, and AWS Quicksight to streamline information.
+    - Collaborated with a team of data scientists, data engineers, developers, and product owners to drive project success.
+    ''')
+# with col2:
+#     st.image(Image.open('img/tf1_2.png'))
+st.markdown('---')
+
+layout.txt('''### Data scientist / Training Manager''',
 '<h5 class=years>2021 - 2023</h5>')
 
 col1, col2 = st.columns([3,2])
